@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mind Valley Institute</title>
+
+<link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Segoe UI',sans-serif}
+body{scroll-behavior:smooth}
+
+/* HEADER */
+header{
+position:fixed;width:100%;top:0;
+background:linear-gradient(90deg,#4b2e83,#6a3dc1);
+color:white;padding:15px 30px;
+display:flex;justify-content:space-between;
+align-items:center;z-index:1000
+}
+
+nav a{color:white;margin:0 10px;text-decoration:none;font-weight:600}
+
+/* HERO */
+.hero{
+height:100vh;
+background:url('image1.jpg') no-repeat center center;
+background-size:cover;
+display:flex;align-items:center;justify-content:center;
+text-align:center;color:white;position:relative
+}
+
+.hero::after{
+content:'';position:absolute;top:0;left:0;
+width:100%;height:100%;
+background:rgba(0,0,0,0.5)
+}
+
+.hero-content{position:relative;z-index:2}
+.hero h1{font-size:50px}
+
+/* BUTTON */
+.btn{
+background:linear-gradient(90deg,#ffd700,#ffcc00);
+color:black;padding:12px;border:none;
+border-radius:10px;font-weight:bold;
+cursor:pointer;transition:0.3s;width:100%
+}
+.btn:hover{transform:scale(1.05)}
+
+/* SECTIONS */
+section{padding:80px 20px;text-align:center}
+
+/* CARDS */
+.cards{display:flex;flex-wrap:wrap;gap:20px;justify-content:center}
+.card{
+background:white;padding:20px;border-radius:15px;
+box-shadow:0 4px 10px rgba(0,0,0,0.1);
+width:250px;transition:0.3s
+}
+.card:hover{transform:translateY(-10px)}
+
+/* GALLERY */
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 2 columns */
+  height : auto;
+  width : auto;
+  gap: 10px;
+  margin: 10px;
+  transition: 0.3s;
+}
+
+.image {
+  width: 200px;
+  height: 150px;
+  background-image: url("image.jpg");
+  background-size: cover;
+  background-position: center;
+}.gallery img:hover{transform:scale(1.1)}
+
+/* NOTICE */
+.notice{
+background:#fff3cd;
+padding:15px;
+margin:15px auto;
+border-radius:10px;
+max-width:600px;
+text-align:left;
+box-shadow:0 5px 10px rgba(0,0,0,0.1);
+transition:0.3s
+}
+.notice:hover{transform:scale(1.03)}
+
+/* FORM */
+.form-container{
+max-width:500px;margin:auto;background:white;
+padding:30px;border-radius:20px;
+box-shadow:0 10px 25px rgba(0,0,0,0.2)
+}
+
+form input,form select,form textarea{
+width:100%;padding:12px;margin:10px 0;
+border-radius:10px;border:1px solid #ccc
+}
+
+/* LOGIN */
+.login-box{
+display:none;position:fixed;
+top:50%;left:50%;
+transform:translate(-50%,-50%);
+background:white;padding:30px;
+border-radius:10px;
+box-shadow:0 0 10px gray;
+z-index:2000
+}
+
+/* FOOTER */
+footer{background:#222;color:white;padding:20px}
+
+/* MOBILE */
+@media(max-width:768px){
+.hero h1{font-size:28px}
+nav{display:none}
+}
+</style>
+</head>
+
+<body>
+
+<header>
+<h2>Mind Valley Institute</h2>
+<nav>
+<a href="#home">Home</a>
+<a href="#about">About</a>
+<a href="#courses">Courses</a>
+<a href="#gallery">Gallery</a>
+<a href="#notice">Notice</a>
+<a href="#admission">Admission</a>
+<a href="#contact">Contact</a>
+<a href="#" onclick="showLogin()">Login</a>
+</nav>
+</header>
+
+<!-- HERO -->
+<div class="hero" id="home">
+<div class="hero-content">
+<h1>Empowering Young Minds Beyond Limits</h1>
+<p>A Premier Learning Institute for School and Junior College Academics</p>
+<button class="btn" onclick="scrollToSection('admission')">Apply Now</button>
+</div>
+</div>
+
+<!-- ABOUT -->
+<section id="about" data-aos="fade-right">
+<h2>About Us</h2>
+<p>Mind Valley Institute is a premier learning center established 3 years ago. We provide quality education with a balance of discipline and friendly teaching.</p>
+<p>We prepare students for board exams and competitive exams like IIT-JEE, NEET, and MHT-CET with experienced faculty.</p>
+<p><b>Quality Education : A Community Commitment</b></p>
+</section>
+
+<!-- COURSES -->
+<section id="courses" data-aos="zoom-in">
+<h2>Courses</h2>
+<div class="cards">
+<div class="card"><h3>8th - 10th</h3><p>All Subjects</p></div>
+<div class="card"><h3>11th - 12th</h3><p>Science PCM/PCB</p></div>
+<div class="card"><h3>CET Course</h3><p>IIT-JEE | NEET | MHT-CET</p></div>
+</div>
+</section>
+
+<!-- GALLERY -->
+<section id="gallery">
+<h2>Gallery</h2>
+<div class="gallery">
+<div class="image" style="background-image: url('image1.png'); height: 812px; width: 612px;"></div>
+<div class="image" style="background-image: url('image2.png'); height: 812px; width: 612px;"></div>
+<div class="image" style="background-image: url('image3.png'); height: 812px; width: 612px;"></div>
+<div class="image" style="background-image: url('image4.png'); height: 812px; width: 612px;"></div>
+</div>
+<!--
+<img src="C:\Users\Sana\OneDrive\Desktop\mind valley insititue\image2.png">
+<img src="C:\Users\Sana\OneDrive\Desktop\mind valley insititue\image3.png">
+<img src="C:\Users\Sana\OneDrive\Desktop\mind valley insititue\image4.png">
+-->
+</section>
+
+<!-- NOTICE -->
+<section id="notice">
+<h2>Notice Board</h2>
+
+<div class="notice"><b>📢 Admissions Open 2025-26</b><br>Enroll now for Classes 8th to 12th.</div>
+<div class="notice"><b>🚀 CET Crash Course</b><br>Special batches starting soon.</div>
+<div class="notice"><b>📝 Weekly Tests</b><br>Every Sunday assessment.</div>
+<div class="notice"><b>📊 Results</b><br>Monthly topper list announced.</div>
+<div class="notice"><b>📅 Batch Timings</b><br>Morning & Evening available.</div>
+<div class="notice"><b>🎯 Doubt Sessions</b><br>Extra classes every Saturday.</div>
+
+</section>
+
+<!-- FORM -->
+<section id="admission">
+<div class="form-container">
+<h2>Admission Form</h2>
+<form onsubmit="submitForm(event)">
+<input type="text" placeholder="Name" required>
+<input type="tel" placeholder="Phone" required>
+<input type="email" placeholder="Email" required>
+<select>
+<option>Select Class</option>
+<option>8-10</option>
+<option>11-12</option>
+</select>
+<textarea placeholder="Address"></textarea>
+<button class="btn">Submit</button>
+</form>
+<p id="msg" style="color:green;font-weight:bold"></p>
+</div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+<h2>Contact</h2>
+<p>📞 7030127123</p>
+<p>📧 mindvalleyinstitute2022@gmail.com</p>
+<iframe src="https://maps.google.com/maps?q=pimpri%20pune&t=&z=13&ie=UTF8&iwloc=&output=embed" width="100%" height="300"></iframe>
+</section>
+
+<footer>
+<p>© Mind Valley Institute</p>
+</footer>
+
+<!-- LOGIN -->
+<div class="login-box" id="loginBox">
+<span onclick="hideLogin()" style="cursor:pointer;float:right;font-size:20px;">❌</span>
+<h3>Login</h3>
+<input type="text" placeholder="Username"><br><br>
+<input type="password" placeholder="Password"><br><br>
+<button class="btn" onclick="hideLogin()">Login</button>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+
+<script>
+AOS.init();
+
+function scrollToSection(id){
+document.getElementById(id).scrollIntoView({behavior:'smooth'})
+}
+
+function submitForm(e){
+e.preventDefault();
+document.getElementById('msg').innerText="Form Submitted Successfully!"
+}
+
+function showLogin(){
+document.getElementById('loginBox').style.display='block'
+}
+
+function hideLogin(){
+document.getElementById('loginBox').style.display='none'
+}
+
+window.onscroll=function(){
+document.getElementById('loginBox').style.display='none'
+}
+</script>
+
+</body>
+</html>
